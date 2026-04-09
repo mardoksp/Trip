@@ -3,579 +3,1034 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Семейное автопутешествие в Грузию — июнь 2026</title>
-  <meta name="description" content="Красиво оформленный одностраничный сайт для обсуждения семейного автопутешествия в Грузию и, при желании, Турцию в июне 2026." />
-  <meta property="og:title" content="Семейное автопутешествие в Грузию — июнь 2026" />
-  <meta property="og:description" content="Две семьи, две машины, один маршрут: Лида и Москва → Грузия → море → опционально Турция." />
+  <title>🚗 Грузия + Турция: Автопутешествие на море — Июнь 2026</title>
+  <meta name="description" content="Интерактивный план поездки для компании 3-4 человек: Кобулети как база, выезды в Батуми, Турцию, лучшие пляжи Черноморья" />
+  <meta property="og:title" content="Грузия + Турция: Автопутешествие на море" />
+  <meta property="og:description" content="14 дней, 4200 км, 8 ночей на море. Маршрут: Москва → Воронеж → Ростов → Минводы → Тбилиси → Кобулети → Батуми → Турция" />
   <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://api.fontshare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=zodiak@400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    :root, [data-theme="light"] {
-      --text-xs: clamp(.75rem,.7rem + .25vw,.875rem);
-      --text-sm: clamp(.875rem,.8rem + .35vw,1rem);
-      --text-base: clamp(1rem,.95rem + .25vw,1.125rem);
-      --text-lg: clamp(1.125rem,1rem + .75vw,1.5rem);
-      --text-xl: clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
-      --text-2xl: clamp(2rem,1.2rem + 2.5vw,3.5rem);
-      --text-3xl: clamp(2.5rem,1rem + 4vw,5rem);
-      --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.25rem; --space-6:1.5rem; --space-8:2rem; --space-10:2.5rem; --space-12:3rem; --space-16:4rem; --space-20:5rem; --space-24:6rem;
-      --color-bg:#f7f6f2;
-      --color-surface:#f9f8f5;
-      --color-surface-2:#fbfbf9;
-      --color-surface-offset:#f0ede7;
-      --color-border:#d9d4cc;
-      --color-text:#26231d;
-      --color-text-muted:#6c6a64;
-      --color-text-faint:#a09d96;
-      --color-primary:#0d6c73;
-      --color-primary-hover:#0b5359;
-      --color-primary-soft:#d8e6e4;
-      --color-secondary:#c9772b;
-      --color-secondary-soft:#f1dfcf;
-      --shadow-sm:0 1px 2px rgba(0,0,0,.05);
-      --shadow-md:0 10px 30px rgba(0,0,0,.08);
-      --shadow-lg:0 24px 60px rgba(0,0,0,.12);
-      --radius-sm:.5rem; --radius-md:.875rem; --radius-lg:1.25rem; --radius-xl:1.75rem; --radius-full:999px;
-      --font-body:'Satoshi', Arial, sans-serif;
-      --font-display:'Zodiak', Georgia, serif;
-      --content:1180px;
+    :root {
+      --bg: #f8f9fa;
+      --surface: #ffffff;
+      --surface-alt: #f1f3f5;
+      --border: #e9ecef;
+      --text: #212529;
+      --text-muted: #6c757d;
+      --primary: #0d9488;
+      --primary-hover: #0f766e;
+      --primary-soft: #ccfbf1;
+      --secondary: #f59e0b;
+      --secondary-soft: #fef3c7;
+      --danger: #ef4444;
+      --success: #10b981;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+      --radius: 16px;
+      --radius-lg: 24px;
     }
     [data-theme="dark"] {
-      --color-bg:#171614;
-      --color-surface:#1d1b19;
-      --color-surface-2:#23211f;
-      --color-surface-offset:#2a2724;
-      --color-border:#3a3733;
-      --color-text:#ebe7df;
-      --color-text-muted:#b7b1a7;
-      --color-text-faint:#8e887f;
-      --color-primary:#72b7bd;
-      --color-primary-hover:#5aa2a8;
-      --color-primary-soft:#243535;
-      --color-secondary:#e3a05f;
-      --color-secondary-soft:#3b2c20;
-      --shadow-sm:0 1px 2px rgba(0,0,0,.2);
-      --shadow-md:0 12px 30px rgba(0,0,0,.28);
-      --shadow-lg:0 24px 60px rgba(0,0,0,.38);
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-alt: #334155;
+      --border: #475569;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary: #2dd4bf;
+      --primary-hover: #14b8a6;
+      --primary-soft: #134e4a;
+      --secondary: #fbbf24;
+      --secondary-soft: #78350f;
+      --danger: #f87171;
+      --success: #34d399;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.5);
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;background:var(--color-bg);color:var(--color-text)}
-    img,svg{display:block;max-width:100%}
-    a{text-decoration:none;color:inherit}
-    button{font:inherit;border:none;background:none;cursor:pointer}
-    .container{width:min(calc(100% - 32px), var(--content));margin:0 auto}
-    .section{padding:clamp(var(--space-12),8vw,var(--space-24)) 0}
-    .eyebrow{display:inline-flex;align-items:center;gap:.55rem;padding:.45rem .8rem;border-radius:var(--radius-full);background:var(--color-primary-soft);color:var(--color-primary);font-size:var(--text-xs);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-    .section-head{display:grid;gap:var(--space-3);margin-bottom:var(--space-10)}
-    .section-head h2{font-family:var(--font-display);font-size:var(--text-2xl);line-height:1.05;letter-spacing:-.03em;max-width:12ch}
-    .section-head p{max-width:66ch;color:var(--color-text-muted)}
-    .header{position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--color-bg) 82%, transparent);backdrop-filter:blur(12px);border-bottom:1px solid color-mix(in srgb, var(--color-border) 70%, transparent)}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:.9rem 0}
-    .brand{display:flex;align-items:center;gap:.9rem}
-    .brand-mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,var(--color-primary),color-mix(in srgb,var(--color-primary) 58%, white));display:grid;place-items:center;color:white;box-shadow:var(--shadow-md)}
-    .brand-mark svg{width:24px;height:24px}
-    .brand-copy strong{display:block;font-size:var(--text-sm)}
-    .brand-copy span{display:block;font-size:var(--text-xs);color:var(--color-text-muted)}
-    .nav{display:flex;gap:var(--space-5);align-items:center;flex-wrap:wrap}
-    .nav a{font-size:var(--text-sm);color:var(--color-text-muted)}
-    .nav a:hover{color:var(--color-text)}
-    .theme-toggle{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--color-surface);border:1px solid var(--color-border);box-shadow:var(--shadow-sm)}
-    .hero{padding:clamp(4rem,8vw,7rem) 0 var(--space-16)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-8);align-items:stretch}
-    .hero-copy{display:grid;gap:var(--space-6);padding:clamp(var(--space-8),5vw,var(--space-12));background:linear-gradient(180deg,var(--color-surface),var(--color-surface-2));border:1px solid var(--color-border);border-radius:var(--radius-xl);box-shadow:var(--shadow-md)}
-    .hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.8rem);line-height:.95;letter-spacing:-.05em;max-width:10ch}
-    .hero p{max-width:60ch;color:var(--color-text-muted)}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;min-height:48px;padding:.9rem 1.15rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;transition:.2s ease}
-    .btn-primary{background:var(--color-primary);color:#fff;box-shadow:var(--shadow-md)}
-    .btn-primary:hover{background:var(--color-primary-hover)}
-    .btn-secondary{background:var(--color-surface-offset);border:1px solid var(--color-border)}
-    .hero-side{display:grid;gap:var(--space-4)}
-    .panel{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);box-shadow:var(--shadow-md)}
-    .trip-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3);padding:var(--space-4)}
-    .metric{padding:var(--space-4);background:var(--color-surface-2);border:1px solid color-mix(in srgb, var(--color-border) 85%, transparent);border-radius:var(--radius-lg)}
-    .metric strong{display:block;font-size:var(--text-lg);line-height:1.1}
-    .metric span{display:block;margin-top:.35rem;font-size:var(--text-xs);color:var(--color-text-muted)}
-    .route-card{padding:var(--space-6)}
-    .route-visual{position:relative;height:300px;border-radius:calc(var(--radius-xl) - .35rem);overflow:hidden;background:radial-gradient(circle at 18% 20%, color-mix(in srgb,var(--color-primary) 15%, transparent), transparent 34%), radial-gradient(circle at 85% 26%, color-mix(in srgb,var(--color-secondary) 16%, transparent), transparent 28%), linear-gradient(180deg, var(--color-surface-offset), var(--color-surface-2));border:1px solid color-mix(in srgb,var(--color-border) 85%, transparent)}
-    .route-line{position:absolute;inset:0}
-    .route-point{position:absolute;display:grid;place-items:center;width:15px;height:15px;border-radius:50%;background:var(--color-primary);box-shadow:0 0 0 6px color-mix(in srgb, var(--color-primary) 16%, transparent)}
-    .route-label{position:absolute;transform:translate(-10%, calc(-100% - 10px));font-size:12px;font-weight:700;padding:.3rem .55rem;border-radius:999px;background:var(--color-surface);border:1px solid var(--color-border);white-space:nowrap;box-shadow:var(--shadow-sm)}
-    .cards-2,.cards-3,.cards-4{display:grid;gap:var(--space-4)}
-    .cards-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .cards-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .card{padding:var(--space-6);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);box-shadow:var(--shadow-sm)}
-    .card h3{font-size:var(--text-lg);line-height:1.15;margin-bottom:var(--space-3)}
-    .card p,.card li{color:var(--color-text-muted)}
-    .card ul{list-style:none;display:grid;gap:.55rem;margin-top:var(--space-4)}
-    .card li::before{content:"• ";color:var(--color-primary);font-weight:700}
-    .accent{background:linear-gradient(180deg, color-mix(in srgb,var(--color-primary-soft) 65%, var(--color-surface)), var(--color-surface));}
-    .split{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--space-6);align-items:start}
-    .table-wrap{overflow:auto;border-radius:var(--radius-xl);border:1px solid var(--color-border);box-shadow:var(--shadow-sm)}
-    table{width:100%;border-collapse:collapse;background:var(--color-surface)}
-    th,td{padding:1rem;vertical-align:top;text-align:left;border-bottom:1px solid color-mix(in srgb,var(--color-border) 80%, transparent)}
-    th{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.05em;color:var(--color-text-muted);background:var(--color-surface-2)}
-    td{font-size:var(--text-sm)}
-    .timeline{display:grid;gap:var(--space-4)}
-    .timeline-item{display:grid;grid-template-columns:84px 1fr;gap:var(--space-4);align-items:start;padding:var(--space-5);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl)}
-    .timeline-day{display:grid;gap:.25rem;padding:var(--space-3);border-radius:var(--radius-lg);background:var(--color-primary-soft);color:var(--color-primary);text-align:center;font-weight:700}
-    .timeline-day span:last-child{font-size:var(--text-xs);letter-spacing:.04em;text-transform:uppercase}
-    .timeline-body h3{margin-bottom:.35rem;font-size:var(--text-lg)}
-    .timeline-body p{color:var(--color-text-muted)}
-    .pill-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:var(--space-4)}
-    .pill{padding:.55rem .8rem;border-radius:999px;background:var(--color-surface-offset);border:1px solid var(--color-border);font-size:var(--text-xs);font-weight:700;color:var(--color-text-muted)}
-    .budget-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4)}
-    .budget-card{padding:var(--space-6);border-radius:var(--radius-xl);background:var(--color-surface);border:1px solid var(--color-border)}
-    .budget-card strong{font-size:var(--text-xl);font-family:var(--font-display);line-height:1}
-    .budget-card ul{list-style:none;display:grid;gap:.7rem;margin-top:var(--space-4)}
-    .budget-card li{display:flex;justify-content:space-between;gap:1rem;font-size:var(--text-sm);color:var(--color-text-muted);border-bottom:1px dashed color-mix(in srgb, var(--color-border) 70%, transparent);padding-bottom:.55rem}
-    .budget-card li:last-child{border-bottom:none;padding-bottom:0}
-    .map-card{padding:var(--space-4);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);box-shadow:var(--shadow-md)}
-    .map-placeholder{position:relative;min-height:480px;border-radius:calc(var(--radius-xl) - .35rem);overflow:hidden;background:linear-gradient(135deg,#dfe8df,#eef1e9 33%,#e8ece6 66%,#dde4db)}
-    [data-theme="dark"] .map-placeholder{background:linear-gradient(135deg,#233129,#26322e 33%,#202925 66%,#2d3832)}
-    .map-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px);background-size:42px 42px;opacity:.38}
-    [data-theme="dark"] .map-grid{background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px)}
-    .map-note{position:absolute;left:18px;right:18px;bottom:18px;padding:1rem 1.1rem;border-radius:1rem;background:color-mix(in srgb,var(--color-surface) 86%, transparent);backdrop-filter:blur(10px);border:1px solid color-mix(in srgb,var(--color-border) 70%, transparent);font-size:var(--text-sm)}
-    .map-point{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--color-secondary);box-shadow:0 0 0 7px color-mix(in srgb,var(--color-secondary) 18%, transparent)}
-    .map-line{position:absolute;left:8%;top:12%;width:78%;height:72%}
-    .map-embed-code{margin-top:var(--space-4);padding:var(--space-5);border-radius:var(--radius-lg);background:var(--color-surface-offset);border:1px solid var(--color-border);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;white-space:pre-wrap;word-break:break-word;color:var(--color-text-muted)}
-    .cta{padding:var(--space-10);border-radius:2rem;background:linear-gradient(135deg,var(--color-primary),color-mix(in srgb,var(--color-primary) 55%, #9fd2d5));color:#fff;box-shadow:var(--shadow-lg)}
-    .cta h2{font-family:var(--font-display);font-size:var(--text-2xl);line-height:1;max-width:12ch;margin-bottom:var(--space-4)}
-    .cta p{max-width:60ch;color:rgba(255,255,255,.82)}
-    .cta .btn-secondary{background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.2)}
-    .footer{padding:var(--space-10) 0 var(--space-12);color:var(--color-text-muted)}
-    .muted{color:var(--color-text-muted)}
-    .small{font-size:var(--text-xs)}
-    .tag{display:inline-flex;padding:.42rem .7rem;border-radius:999px;background:var(--color-secondary-soft);color:var(--color-secondary);font-size:var(--text-xs);font-weight:700}
-    .stack{display:grid;gap:var(--space-4)}
-    @media (max-width: 1080px){
-      .hero-grid,.split,.cards-4,.cards-3,.cards-2,.budget-grid{grid-template-columns:1fr 1fr}
-      .nav{display:none}
-    }
-    @media (max-width: 780px){
-      .hero-grid,.split,.cards-4,.cards-3,.cards-2,.budget-grid{grid-template-columns:1fr}
-      .trip-metrics{grid-template-columns:1fr 1fr}
-      .timeline-item{grid-template-columns:1fr}
-      .timeline-day{max-width:88px}
-      .header-inner{align-items:flex-start}
-      .hero h1{max-width:11ch}
-      .map-placeholder{min-height:400px}
-    }
-    @media (max-width: 520px){
-      .trip-metrics{grid-template-columns:1fr}
-      .container{width:min(calc(100% - 22px), var(--content))}
-      .hero-copy,.route-card,.card,.budget-card,.map-card,.cta{padding:1.2rem}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    a { text-decoration: none; color: inherit; }
+    button { font: inherit; border: none; background: none; cursor: pointer; }
+    
+    /* Header */
+    .header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    [data-theme="dark"] .header { background: rgba(15,23,42,0.9); }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: grid; place-items: center; font-size: 24px; }
+    .logo-text h1 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; }
+    .logo-text p { font-size: 12px; color: var(--text-muted); }
+    .nav-desktop { display: flex; gap: 24px; }
+    .nav-desktop a { font-size: 14px; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
+    .nav-desktop a:hover { color: var(--primary); }
+    .theme-btn { width: 44px; height: 44px; border-radius: 50%; background: var(--surface-alt); display: grid; place-items: center; }
+    .mobile-menu-btn { display: none; width: 44px; height: 44px; border-radius: 12px; background: var(--surface-alt); flex-direction: column; justify-content: center; align-items: center; gap: 4px; }
+    .mobile-menu-btn span { width: 20px; height: 2px; background: var(--text); border-radius: 2px; }
+    
+    /* Hero */
+    .hero { padding: 60px 0 40px; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: stretch; }
+    .hero-content { background: var(--surface); padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+    .badge { display: inline-block; padding: 8px 16px; background: var(--primary-soft); color: var(--primary); border-radius: 100px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 48px); line-height: 1.1; margin-bottom: 16px; }
+    .hero p { color: var(--text-muted); font-size: 16px; margin-bottom: 24px; max-width: 600px; }
+    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 24px; }
+    .stat { text-align: center; padding: 16px; background: var(--surface-alt); border-radius: var(--radius); }
+    .stat-value { font-size: 24px; font-weight: 700; color: var(--primary); }
+    .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    .hero-side { display: grid; gap: 12px; }
+    .quick-card { background: var(--surface); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+    .quick-card h3 { font-size: 15px; margin-bottom: 6px; }
+    .quick-card p { font-size: 13px; color: var(--text-muted); }
+    
+    /* Section */
+    .section { padding: 50px 0; }
+    .section-header { text-align: center; margin-bottom: 40px; }
+    .section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 4vw, 36px); margin-bottom: 10px; }
+    .section-header p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+    
+    /* Timeline */
+    .timeline { position: relative; padding-left: 36px; }
+    .timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 3px; background: var(--border); border-radius: 3px; }
+    .day-card { position: relative; background: var(--surface); padding: 20px; border-radius: var(--radius); margin-bottom: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+    .day-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .day-marker { position: absolute; left: -36px; top: 20px; width: 25px; height: 25px; background: var(--primary); border-radius: 50%; display: grid; place-items: center; color: white; font-size: 11px; font-weight: 700; border: 3px solid var(--bg); }
+    .day-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 10px; }
+    .day-title h3 { font-size: 16px; font-weight: 600; }
+    .day-route { font-size: 13px; color: var(--text-muted); }
+    .day-meta { display: flex; gap: 10px; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text-muted); background: var(--surface-alt); padding: 5px 10px; border-radius: 100px; }
+    .day-content { margin-top: 12px; display: none; }
+    .day-card.active .day-content { display: block; }
+    .day-content p { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+    .day-highlights { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+    .highlight { padding: 5px 10px; background: var(--primary-soft); color: var(--primary); border-radius: 100px; font-size: 11px; font-weight: 500; }
+    .highlight.alt { background: var(--secondary-soft); color: var(--secondary); }
+    .highlight.risk { background: #fef2f2; color: var(--danger); }
+    .toggle-day { font-size: 12px; color: var(--primary); font-weight: 600; margin-top: 10px; display: inline-flex; align-items: center; gap: 5px; }
+    
+    /* Locations Grid */
+    .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .location-card { background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border); transition: transform 0.2s; }
+    .location-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .location-img { height: 160px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: grid; place-items: center; font-size: 56px; }
+    .location-content { padding: 20px; }
+    .location-content h3 { font-size: 17px; margin-bottom: 6px; }
+    .location-content p { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
+    .location-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .tag { padding: 4px 8px; background: var(--surface-alt); border-radius: 100px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+    .location-pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .pros, .cons { padding: 10px; border-radius: var(--radius); }
+    .pros { background: #f0fdf4; }
+    .cons { background: #fef2f2; }
+    [data-theme="dark"] .pros { background: #134e4a; }
+    [data-theme="dark"] .cons { background: #7f1d1d; }
+    .pros h4, .cons h4 { font-size: 11px; font-weight: 700; margin-bottom: 6px; }
+    .pros ul, .cons ul { list-style: none; }
+    .pros li, .cons li { font-size: 11px; padding: 3px 0; }
+    .pros li::before { content: '✓ '; color: var(--success); font-weight: 700; }
+    .cons li::before { content: '✗ '; color: var(--danger); font-weight: 700; }
+    
+    /* Budget */
+    .budget-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .budget-card { background: var(--surface); padding: 28px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 2px solid transparent; transition: border-color 0.2s; }
+    .budget-card.featured { border-color: var(--primary); background: linear-gradient(180deg, var(--primary-soft), var(--surface)); }
+    .budget-card h3 { font-size: 18px; margin-bottom: 6px; }
+    .budget-card .price { font-size: 32px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .budget-card .per-person { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+    .budget-items { margin-bottom: 20px; }
+    .budget-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+    .budget-item:last-child { border-bottom: none; }
+    .budget-total { font-size: 16px; font-weight: 700; padding-top: 12px; border-top: 2px solid var(--border); }
+    
+    /* Transport */
+    .transport-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .transport-card { background: var(--surface); padding: 28px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+    .transport-card h3 { font-size: 18px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .transport-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    .spec { text-align: center; padding: 14px; background: var(--surface-alt); border-radius: var(--radius); }
+    .spec-value { font-size: 20px; font-weight: 700; color: var(--primary); }
+    .spec-label { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+    
+    /* Alternatives */
+    .alternatives { background: var(--surface-alt); padding: 32px; border-radius: var(--radius-lg); }
+    .alt-compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 20px; }
+    .alt-option { background: var(--surface); padding: 20px; border-radius: var(--radius); }
+    .alt-option h4 { font-size: 15px; margin-bottom: 10px; }
+    .alt-option p { font-size: 13px; color: var(--text-muted); }
+    
+    /* Practical */
+    .practical-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .practical-card { background: var(--surface); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+    .practical-card h4 { font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .practical-card ul { list-style: none; }
+    .practical-card li { font-size: 13px; color: var(--text-muted); padding: 5px 0; }
+    .practical-card li::before { content: '•'; color: var(--primary); font-weight: 700; margin-right: 6px; }
+    
+    /* CTA */
+    .cta { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 50px 32px; border-radius: var(--radius-lg); text-align: center; color: white; }
+    .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 4vw, 36px); margin-bottom: 12px; }
+    .cta p { font-size: 16px; opacity: 0.9; margin-bottom: 24px; max-width: 550px; margin-left: auto; margin-right: auto; }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 14px 28px; border-radius: 100px; font-weight: 700; font-size: 15px; transition: transform 0.2s; }
+    .btn:hover { transform: scale(1.05); }
+    .btn-white { background: white; color: var(--primary); }
+    .btn-outline { border: 2px solid white; color: white; }
+    
+    /* Footer */
+    .footer { padding: 32px 0; text-align: center; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 50px; }
+    
+    /* Mobile Navigation */
+    .mobile-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); border-top: 1px solid var(--border); padding: 12px 0; z-index: 100; }
+    .mobile-nav-inner { display: flex; justify-content: space-around; }
+    .mobile-nav a { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 10px; color: var(--text-muted); }
+    .mobile-nav a.active { color: var(--primary); }
+    .mobile-nav svg { width: 20px; height: 20px; }
+    
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-desktop { display: none; }
+      .mobile-menu-btn { display: flex; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .timeline { padding-left: 28px; }
+      .timeline::before { left: 5px; }
+      .day-marker { left: -28px; width: 19px; height: 19px; font-size: 9px; }
+      .day-header { flex-direction: column; }
+      .location-pros-cons { grid-template-columns: 1fr; }
+      .transport-specs { grid-template-columns: 1fr; }
+      .body { padding-bottom: 70px; }
     }
   </style>
 </head>
 <body>
-  <a href="#content" style="position:absolute;left:-9999px;top:auto">Перейти к содержимому</a>
+
+  <!-- Header -->
   <header class="header">
     <div class="container header-inner">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 16l4-5 4 3 7-8"/>
-            <path d="M4 20h16"/>
-            <circle cx="8" cy="11" r="1.5" fill="currentColor" stroke="none"/>
-            <circle cx="12" cy="14" r="1.5" fill="currentColor" stroke="none"/>
-            <circle cx="19" cy="6" r="1.5" fill="currentColor" stroke="none"/>
-          </svg>
-        </div>
-        <div class="brand-copy">
-          <strong>Июнь у моря</strong>
-          <span>Семейное автопутешествие 2026</span>
+      <div class="logo">
+        <div class="logo-icon">🚗</div>
+        <div class="logo-text">
+          <h1>Грузия + Турция</h1>
+          <p>Июнь 2026 • 14 дней</p>
         </div>
       </div>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="#format">Формат</a>
-        <a href="#locations">Локации</a>
+      <nav class="nav-desktop">
         <a href="#route">Маршрут</a>
+        <a href="#locations">Локации</a>
         <a href="#budget">Бюджет</a>
-        <a href="#map">Карта</a>
+        <a href="#transport">Транспорт</a>
+        <a href="#practical">Инфо</a>
       </nav>
-      <button class="theme-toggle" data-theme-toggle aria-label="Сменить тему">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <button class="theme-btn" data-theme-toggle aria-label="Переключить тему">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <button class="mobile-menu-btn" aria-label="Меню">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main id="content">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Лида + Москва → Грузия → море</span>
-          <h1>Больше дней на море, меньше суеты в дороге.</h1>
-          <p>Одностраничный сайт для обсуждения семейного автопутешествия в июне 2026: две семьи, две машины, единый маршрут, мягкие переезды, пляжная база в Грузии и опциональный выезд в Турцию.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#route">Смотреть маршрут</a>
-            <a class="btn btn-secondary" href="#map">Открыть карту</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">🌊 Больше моря, меньше дороги</span>
+        <h1>Автопутешествие на Черное море через Грузию</h1>
+        <p>Оптимальный маршрут для компании 3-4 человек: Кобулети как база отдыха, радиальные выезды в Батуми, Уреки, Шекветили и однодневный трип в Турцию.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value">14</div>
+            <div class="stat-label">дней</div>
           </div>
-          <div class="pill-row">
-            <span class="pill">Период отпуска: 08.06–21.06</span>
-            <span class="pill">Приоритет: больше моря</span>
-            <span class="pill">Geely Atlas Pro + Tesla Model X</span>
+          <div class="stat">
+            <div class="stat-value">4200</div>
+            <div class="stat-label">км пути</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">8</div>
+            <div class="stat-label">ночей на море</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">$450</div>
+            <div class="stat-label">на человека</div>
           </div>
         </div>
-        <div class="hero-side">
-          <div class="panel route-card">
-            <div class="route-visual">
-              <svg class="route-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M10,16 C20,18 24,26 28,30 C34,36 42,38 46,46 C50,54 56,58 64,60 C72,62 74,71 78,76 C82,82 88,85 93,88" stroke="currentColor" stroke-width="1.8" fill="none" style="color:var(--color-primary);opacity:.7;stroke-dasharray:4 3"/>
-              </svg>
-              <div class="route-point" style="left:10%;top:15%"><span class="route-label">Лида</span></div>
-              <div class="route-point" style="left:27%;top:29%"><span class="route-label">Воронеж</span></div>
-              <div class="route-point" style="left:44%;top:45%"><span class="route-label">Ростов</span></div>
-              <div class="route-point" style="left:63%;top:59%"><span class="route-label">Ларс</span></div>
-              <div class="route-point" style="left:77%;top:75%"><span class="route-label">Тбилиси</span></div>
-              <div class="route-point" style="left:90%;top:86%;background:var(--color-secondary);box-shadow:0 0 0 6px color-mix(in srgb, var(--color-secondary) 16%, transparent)"><span class="route-label">Кобулети</span></div>
+      </div>
+      <div class="hero-side">
+        <div class="quick-card">
+          <h3>🎯 Главная цель</h3>
+          <p>Отдых на пляжах Черного моря с комфортной базой в Кобулети</p>
+        </div>
+        <div class="quick-card">
+          <h3>🚙 Транспорт</h3>
+          <p>Tesla Model X + Geely Atlas Pro — зарядки и заправки учтены</p>
+        </div>
+        <div class="quick-card">
+          <h3>🇹🇷 Турция</h3>
+          <p>Однодневный выезд из Кобулети без смены основной базы</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Route Timeline -->
+  <section class="section" id="route">
+    <div class="container">
+      <div class="section-header">
+        <h2>📅 Маршрут по дням</h2>
+        <p>Нажмите на любой день, чтобы раскрыть детали: расстояния, остановки, ночёвки и альтернативы</p>
+      </div>
+      <div class="timeline">
+        
+        <!-- Day 1 -->
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-marker">1</div>
+          <div class="day-header">
+            <div class="day-title">
+              <h3>Москва → Воронеж</h3>
+              <p class="day-route">550 км • 6 часов в пути</p>
+            </div>
+            <div class="day-meta">
+              <span class="meta-item">🛣️ М4 «Дон»</span>
+              <span class="meta-item">🏨 Ночёвка: отель</span>
             </div>
           </div>
-          <div class="trip-metrics panel">
-            <div class="metric"><strong>6–8 ночей</strong><span>на морской базе при мягком сценарии</span></div>
-            <div class="metric"><strong>2 семьи</strong><span>7 человек, 2 машины, 1 общий маршрут</span></div>
-            <div class="metric"><strong>95 бензин</strong><span>учитываем крупные трассовые АЗС</span></div>
-            <div class="metric"><strong>CCS2 / AC</strong><span>закладываем зарядки Tesla по пути</span></div>
+          <div class="day-content">
+            <p><strong>Логика:</strong> Первый этап — комфортный разгон. Доезжаем до Воронежа, чтобы не перегружаться в первый день и отдохнуть перед длинным броском к Кавказу.</p>
+            <p><strong>Остановки:</strong> По пути — Старый Оскол (обед, заправка).</p>
+            <p><strong>Ночёвка:</strong> Отель в Воронеже (центр, парковка).</p>
+            <p><strong>Почему так:</strong> Альтернатива — доехать до Ростова, но это будет 900+ км за день, слишком утомительно для старта.</p>
+            <div class="day-highlights">
+              <span class="highlight">✓ Комфортный старт</span>
+              <span class="highlight alt">⚡ Зарядка Tesla в отеле</span>
+              <span class="highlight risk">⛽ Заправки без проблем</span>
+            </div>
+            <span class="toggle-day">▼ Развернуть详情</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="format">
-      <div class="container split">
-        <div>
-          <div class="section-head">
-            <span class="eyebrow">Формат поездки</span>
-            <h2>Оптимальный сценарий — ехать ради моря.</h2>
-            <p>Главная идея этой версии — не превращать отпуск в автопробег. Дорога строится так, чтобы сохранить силы, комфорт детям и оставить максимум времени на побережье.</p>
-          </div>
-          <div class="cards-2">
-            <article class="card accent">
-              <span class="tag">Семья 1</span>
-              <h3>Лида, Беларусь</h3>
-              <p>2 взрослых, дети 7 и 10 лет. Автомобиль: Geely Atlas Pro, бак 55 л, бензин АИ‑95.</p>
-              <ul>
-                <li>Желательны крупные АЗС по трассе.</li>
-                <li>Мягкие дневные пробеги, без перегруза.</li>
-                <li>Ночёвки с парковкой и удобным заселением.</li>
-              </ul>
-            </article>
-            <article class="card accent">
-              <span class="tag">Семья 2</span>
-              <h3>Москва, Россия</h3>
-              <p>2 взрослых и ребёнок 10 лет. Автомобиль: Tesla Model X с учётом DC/AC зарядок по пути и на базе у моря.</p>
-              <ul>
-                <li>Приоритет — удобные точки CCS2 на трассе.</li>
-                <li>Ночёвки рядом с зарядкой или с возможностью ночного AC.</li>
-                <li>Общие остановки удобно совмещать с кофе и обедом.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-        <aside class="card stack">
-          <h3>Почему этот формат выглядит сильнее всего</h3>
-          <p>Вместо перегруженного путешествия по городам — одна понятная база у моря, 1–2 выезда в Батуми, радиальные поездки по желанию и спокойная логистика для обеих машин.</p>
-          <ul>
-            <li>Встреча семей в районе Воронежа.</li>
-            <li>Дальше путь синхронизируется по ночёвкам.</li>
-            <li>На море — минимум 6 ночей, а лучше 7–8.</li>
-            <li>Батуми использовать как прогулочный выезд, а не как основную базу.</li>
-          </ul>
-          <p class="small muted">Эту секцию можно оставить как итоговую позицию для обсуждения в Telegram, чтобы сразу было видно логику выбора.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="locations">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Побережье</span>
-          <h2>Где лучше жить у моря</h2>
-          <p>Если важнее пляжный отдых и спокойствие, базу лучше делать не в центре Батуми. Оптимальный выбор — Кобулети, Уреки или Шекветили, а в Батуми ездить на прогулки и ужины.</p>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Локация</th>
-                <th>Сильные стороны</th>
-                <th>Слабые стороны</th>
-                <th>Лучше всего подходит</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Кобулети</strong></td>
-                <td>Спокойнее Батуми, понятный семейный формат, много жилья, удобная база для выездов.</td>
-                <td>Меньше городского движения и развлечений, чем в Батуми.</td>
-                <td>Основной вариант для длительной базы 6–8 ночей.</td>
-              </tr>
-              <tr>
-                <td><strong>Уреки</strong></td>
-                <td>Песчаный формат отдыха, мягкий ритм, подходит тем, кто больше ценит пляж.</td>
-                <td>Меньше ощущение «города у моря».</td>
-                <td>Если хочется максимально пляжный, спокойный отпуск.</td>
-              </tr>
-              <tr>
-                <td><strong>Шекветили</strong></td>
-                <td>Более премиальный формат, хорошие отельные базы, красиво для «отпуска как курорта».</td>
-                <td>Бюджет заметно выше.</td>
-                <td>Если нужен более дорогой и эффектный отдых.</td>
-              </tr>
-              <tr>
-                <td><strong>Батуми</strong></td>
-                <td>Набережная, кафе, прогулки, городская жизнь.</td>
-                <td>Шумнее, плотнее, сложнее как семейная база на каждый день.</td>
-                <td>Для коротких выездов, прогулок и ужинов.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Сценарии</span>
-          <h2>Два способа собрать поездку</h2>
-          <p>Если обсуждение в чате идёт живо, удобно сразу показать два понятных варианта: основной и запасной.</p>
-        </div>
-        <div class="cards-2">
-          <article class="card">
-            <span class="tag">Рекомендуемый</span>
-            <h3>Мягкий маршрут, больше моря</h3>
-            <p>Короткие и средние дневные плечи, одна морская база, максимум отдыха, минимум ощущения «мы всё время в дороге».</p>
-            <ul>
-              <li>Подходит семьям с детьми.</li>
-              <li>Проще синхронизировать Tesla и Geely.</li>
-              <li>Легче пережить возможные задержки на Верхнем Ларсе.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <span class="tag">Альтернатива</span>
-            <h3>Насыщенный маршрут, больше локаций</h3>
-            <p>Подойдёт, если хочется Тбилиси, Кутаиси, Батуми и больше переездов, но дней чистого моря станет меньше.</p>
-            <ul>
-              <li>Красивее как «приключение».</li>
-              <li>Утомительнее детям и водителям.</li>
-              <li>Требует более жёсткой дисциплины по графику.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="route">
-      <div class="container split">
-        <div>
-          <div class="section-head">
-            <span class="eyebrow">Маршрут</span>
-            <h2>Базовый таймлайн поездки</h2>
-            <p>Это демонстрационный скелет маршрута для сайта. В нём можно позднее заменить даты, города ночёвок, отели и стоимость без переделки всей страницы.</p>
-          </div>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-day"><span>День 1</span><span>Старт</span></div>
-              <div class="timeline-body">
-                <h3>Выезд с запасом по энергии</h3>
-                <p>Семья из Лиды стартует раньше, семья из Москвы — своим темпом. Цель первых дней — спокойно дойти до точки синхронизации без перегруза и ночных доездов.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-day"><span>День 2</span><span>Встреча</span></div>
-              <div class="timeline-body">
-                <h3>Встреча в районе Воронежа</h3>
-                <p>После встречи семьи дальше едут уже более слаженно: проще планировать питание, отдых детей, зарядки и общий ритм движения.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-day"><span>День 3–4</span><span>Юг</span></div>
-              <div class="timeline-body">
-                <h3>Спуск к Кавказу без гонки</h3>
-                <p>Ростов, Минводы или Владикавказ выбираются как технически удобные ночёвки. Здесь же удобно балансировать заправки и зарядки перед границей.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-day"><span>День 5</span><span>Граница</span></div>
-              <div class="timeline-body">
-                <h3>Верхний Ларс и въезд в Грузию</h3>
-                <p>Лучший принцип — не добивать после границы слишком длинный переезд. Если день напряжённый, логичнее оставить короткую ночёвку в пути, чем отнимать силы у моря.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-day"><span>День 6–12</span><span>Море</span></div>
-              <div class="timeline-body">
-                <h3>Главный блок отдыха</h3>
-                <p>6–8 ночей на одной пляжной базе. Радиальные выезды: Батуми, Гонио, Сарпи, Уреки, Ботанический сад или короткий выезд в Турцию.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-day"><span>Финал</span><span>Обратно</span></div>
-              <div class="timeline-body">
-                <h3>Обратный путь без ощущения марафона</h3>
-                <p>Обратный маршрут лучше делать так же мягко, как и путь туда. Идея страницы — показать, что отпуск можно прожить как отдых, а не как набор перегонов.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <aside class="card stack">
-          <h3>Логика под автомобили</h3>
-          <ul>
-            <li><strong>Geely Atlas Pro:</strong> заправки на крупных трассовых АЗС, бак держать с запасом, ночёвки без позднего прибытия.</li>
-            <li><strong>Tesla Model X:</strong> точка дня выбирается не только по километрам, но и по удобной DC/AC зарядке и запасу перед горными участками.</li>
-            <li><strong>Общий принцип:</strong> кофе-стопы и зарядки Tesla должны совпадать с комфортными остановками для обеих семей.</li>
-          </ul>
-          <div class="pill-row">
-            <span class="pill">Совместная логистика</span>
-            <span class="pill">Парковка у жилья</span>
-            <span class="pill">Минимум суеты</span>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="budget">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Бюджет</span>
-          <h2>Порядок расходов по семьям</h2>
-          <p>Это шаблонная смета для обсуждения. Подставьте свои точные значения по топливу, зарядкам, жилью и платным дорогам после финального выбора маршрута.</p>
-        </div>
-        <div class="budget-grid">
-          <article class="budget-card">
-            <span class="tag">Семья 1 · Geely</span>
-            <h3 style="margin-top:1rem">Ориентир: комфортный средний бюджет</h3>
-            <strong>$1300–1500</strong>
-            <ul>
-              <li><span>Бензин и дорога</span><span>≈ 250–350$</span></li>
-              <li><span>Ночёвки в пути</span><span>≈ 200–300$</span></li>
-              <li><span>Жильё у моря</span><span>≈ 300–500$</span></li>
-              <li><span>Питание</span><span>≈ 250–350$</span></li>
-              <li><span>Развлечения и запас</span><span>≈ 150–250$</span></li>
-            </ul>
-          </article>
-          <article class="budget-card">
-            <span class="tag">Семья 2 · Tesla</span>
-            <h3 style="margin-top:1rem">Ориентир: чуть ниже за счёт энергии</h3>
-            <strong>$1100–1300</strong>
-            <ul>
-              <li><span>Зарядки и дорога</span><span>≈ 120–220$</span></li>
-              <li><span>Ночёвки в пути</span><span>≈ 220–320$</span></li>
-              <li><span>Жильё у моря</span><span>≈ 300–500$</span></li>
-              <li><span>Питание</span><span>≈ 220–320$</span></li>
-              <li><span>Развлечения и запас</span><span>≈ 150–250$</span></li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="map">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Карта</span>
-          <h2>Блок для маршрута и красивой вставки</h2>
-          <p>Ниже — готовое место под интерактивную карту. Можно оставить этот красивый макет как есть для обсуждения в чате, либо заменить на iframe Google Maps / Google My Maps / карту из Tilda.</p>
-        </div>
-        <div class="map-card">
-          <div class="map-placeholder">
-            <div class="map-grid"></div>
-            <svg class="map-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M7 17 C18 16, 22 27, 30 30 S46 43, 50 49 S61 58, 67 61 S79 74, 92 86" fill="none" stroke="var(--color-primary)" stroke-width="1.7" stroke-dasharray="4 3" />
-            </svg>
-            <div class="map-point" style="left:7%;top:14%"></div>
-            <div class="map-point" style="left:29%;top:28%"></div>
-            <div class="map-point" style="left:49%;top:48%"></div>
-            <div class="map-point" style="left:66%;top:60%"></div>
-            <div class="map-point" style="left:79%;top:73%"></div>
-            <div class="map-point" style="left:91%;top:85%;background:var(--color-primary)"></div>
-            <div class="map-note">
-              <strong>Что сюда вставить</strong><br>
-              Лучше всего использовать Google My Maps или Google Maps Embed с waypoint’ами: Лида → Москва → Воронеж → Ростов-на-Дону → Владикавказ → Тбилиси → Кобулети. Если захотите, этот блок можно полностью заменить iframe-картой внутри Tilda.
+        <!-- Day 2 -->
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-marker">2</div>
+          <div class="day-header">
+            <div class="day-title">
+              <h3>Воронеж → Ростов-на-Дону</h3>
+              <p class="day-route">350 км • 4 часа в пути</p>
+            </div>
+            <div class="day-meta">
+              <span class="meta-item">🛣️ М4 «Дон»</span>
+              <span class="meta-item">🏨 Ночёвка: отель</span>
             </div>
           </div>
-          <div class="map-embed-code">&lt;iframe width="100%" height="520" style="border:0;border-radius:24px" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY&amp;origin=Lida,Belarus&amp;destination=Kobuleti,Georgia&amp;waypoints=Moscow,Russia|Voronezh,Russia|Rostov-on-Don,Russia|Vladikavkaz,Russia|Tbilisi,Georgia&amp;mode=driving"&gt;&lt;/iframe&gt;</div>
+          <div class="day-content">
+            <p><strong>Логика:</strong> Короткий переход, время на прогулку по Ростову. Крупный город с развитой инфраструктурой.</p>
+            <p><strong>Что посмотреть:</strong> Набережная Дона, центр города, обед в локальном ресторане.</p>
+            <p><strong>Ночёвка:</strong> Отель в Ростове (парковка, завтрак).</p>
+            <p><strong>Зарядка Tesla:</strong> Supercharger в Ростове или отель.</p>
+            <div class="day-highlights">
+              <span class="highlight">✓ Лёгкий переезд</span>
+              <span class="highlight alt">🌆 Прогулка по городу</span>
+              <span class="highlight">⚡ Tesla Supercharger</span>
+            </div>
+            <span class="toggle-day">▼ Развернуть详情</span>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container cards-3">
-        <article class="card">
-          <h3>Что заменить перед публикацией</h3>
-          <ul>
-            <li>Даты выезда и возвращения.</li>
-            <li>Финальную морскую базу.</li>
-            <li>Точные ночёвки по пути.</li>
-            <li>Ссылку на реальную карту.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Что хорошо вставить дополнительно</h3>
-          <ul>
-            <li>Скрин маршрута из My Maps.</li>
-            <li>Ссылки на 2–3 отеля или апартамента.</li>
-            <li>Отдельный блок по Tesla: зарядки и приложения.</li>
-            <li>Блок по рискам Верхнего Ларса.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Как вставить в Tilda</h3>
-          <ul>
-            <li>Создать страницу и добавить блок T123.</li>
-            <li>Вставить весь HTML-код целиком.</li>
-            <li>При необходимости заменить секцию карты на iframe.</li>
-            <li>Опубликовать и отправить ссылку в Telegram.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+        <!-- Day 3 -->
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-marker">3</div>
+          <div class="day-header">
+            <div class="day-title">
+              <h3>Ростов → Минеральные Воды</h3>
+              <p class="day-route">400 км • 4.5 часа в пути</p>
+            </div>
+            <div class="day-meta">
+              <span class="meta-item">🛣️ Р217 «Кавказ»</span>
+              <span class="meta-item">🏨 Ночёвка: отель</span>
+            </div>
+          </div>
+          <div class="day-content">
+            <p><strong>Логика:</strong> Последний крупный город России перед горами. Подготовка к перевалу, проверка документов.</p>
+            <p><strong>Остановки:</strong> По желанию — Пятигорск (курорт, Лермонтовские места).</p>
+            <p><strong>Ночёвка:</strong> Отель в Минводах (аэропорт附近, удобно для раннего выезда).</p>
+            <p><strong>Альтернатива:</strong> Ночевка в Пятигорске — дороже, но красивее и спокойнее.</p>
+            <div class="day-highlights">
+              <span class="highlight">✓ Последний крупный город</span>
+              <span class="highlight alt">🏔️ Виды на Кавказ</span>
+              <span class="highlight risk">⏰ Выезд утром</span>
+            </div>
+            <span class="toggle-day">▼ Развернуть详情</span>
+          </div>
+        </div>
 
-    <section class="section">
-      <div class="container">
-        <div class="cta">
-          <h2>Готовая страница для обсуждения в Telegram</h2>
-          <p>Этот шаблон уже можно использовать как красивую основу: он объясняет идею поездки, показывает основной сценарий, даёт базу для бюджета и оставляет место для интерактивной карты. Дальше остаётся только подставить финальные точки маршрута и реальные ссылки на жильё.</p>
-          <div class="hero-actions" style="margin-top:1.25rem">
-            <a class="btn btn-secondary" href="#map">Вставить карту</a>
-            <a class="btn btn-secondary" href="#budget">Проверить бюджет</a>
+        <!-- Day 4 -->
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-marker">4</div>
+          <div class="day-header">
+            <div class="day-title">
+              <h3>Минводы → Владикавказ → Ларс → Тбилиси</h3>
+              <p class="day-route">250 км • 6 часов (с границей)</p>
+            </div>
+            <div class="day-meta">
+              <span class="meta-item">🛣️ Военно-Грузинская дорога</span>
+              <span class="meta-item">🏨 Ночёвка: Тбилиси</span>
+            </div>
+          </div>
+          <div class="day-content">
+            <p><strong>Логика:</strong> Въезд в Грузию через КПП Ларс. Один из самых живописных горных перевалов мира.</p>
+            <p><strong>Граница:</strong> Обычно быстро (30-60 мин), но бывает очередь. Выезжать рано утром!</p>
+            <p><strong>По пути:</strong> Дарьяльское ущелье, замок Ананури, смотровая на Жинвальское водохранилище.</p>
+            <p><strong>Ночёвка:</strong> Тбилиси (старый город, атмосферный отель).</p>
+            <div class="day-highlights">
+              <span class="highlight">🏔️ Живописный перевал</span>
+              <span class="highlight alt">🏰 Замок Ананури</span>
+              <span class="highlight risk">⚠️ Очередь на границе</span>
+            </div>
+            <span class="toggle-day">▼ Развернуть详情</span>
+          </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-marker">5</div>
+          <div class="day-header">
+            <div class="day-title">
+              <h3>Тбилиси → Кобулети</h3>
+              <p class="day-route">320 км • 5 часов в пути</p>
+            </div>
+            <div class="day-meta">
+              <span class="meta-item">🛣️ С1, E60</span>
+              <span class="meta-item">🏠 База: апартаменты</span>
+            </div>
+          </div>
+          <div class="day-content">
+            <p><strong>Логика:</strong> Прибытие на основную базу отдыха. Кобулети — идеальный компромисс: близко к Батуми, дешевле, спокойнее.</p>
+            <p><strong>Остановки:</strong> Гори (крепость), Кутаиси (монастырь Моцамета по желанию).</p>
+            <p><strong>Прибытие:</strong> Заселение в апартаменты (кухня, парковка, Wi-Fi).</p>
+            <p><strong>Зарядка Tesla:</strong> Обязательно зарядиться в Тбилиси перед выездом!</p>
+            <div class="day-highlights">
+              <span class="highlight">🏠 Заезд на базу</span>
+              <span class="highlight alt">🌊 Первое купание</span>
+              <span class="highlight">⚡ Зарядка в Тбилиси</span>
+            </div>
+            <span class="toggle-day">▼ Развернуть详情</span>
+          </div>
+        </div>
+
+        <!-- Days 6-12 -->
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-marker">6-12</div>
+          <div class="day-header">
+            <div class="day-title">
+              <h3>Кобулети: База отдыха</h3>
+              <p class="day-route">7 ночей • Радиальные выезды</p>
+            </div>
+            <div class="day-meta">
+              <span class="meta-item">🏖️ Пляжный отдых</span>
+              <span class="meta-item">🚗 Выезды без переездов</span>
+            </div>
+          </div>
+          <div class="day-content">
+            <p><strong>Концепция:</strong> Не паковать вещи каждый день! Кобулети — наша база для всех выездов.</p>
+            <p><strong>План на неделю:</strong></p>
+            <ul style="margin-left:20px;margin-bottom:12px;font-size:13px;color:var(--text-muted);">
+              <li>День 6: Отдых, адаптация, местный пляж</li>
+              <li>День 7: Батуми (30 км) — набережная, казино, ботанический сад</li>
+              <li>День 8: Уреки (150 км) — магнитные пески, соляные пещеры</li>
+              <li>День 9: Шекветили (100 км) — лучший пляж региона, премиум-отдых</li>
+              <li>День 10: Турция (выезд в 6 утра, возврат вечером)</li>
+              <li>День 11: Борджоми (200 км) — горы, источники, парк</li>
+              <li>День 12: Финальный отдых в Кобулети</li>
+            </ul>
+            <div class="day-highlights">
+              <span class="highlight">🏖️ 8 ночей на море</span>
+              <span class="highlight alt">🚗 Минимум переездов</span>
+              <span class="highlight">🇹🇷 Выезд в Турцию</span>
+            </div>
+            <span class="toggle-day">▼ Развернуть详情</span>
+          </div>
+        </div>
+
+        <!-- Day 13 -->
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-marker">13</div>
+          <div class="day-header">
+            <div class="day-title">
+              <h3>Кобулети → Мцхета → Тбилиси</h3>
+              <p class="day-route">250 км • 4 часа в пути</p>
+            </div>
+            <div class="day-meta">
+              <span class="meta-item">🛣️ E60, С1</span>
+              <span class="meta-item">🏨 Ночёвка: Тбилиси</span>
+            </div>
+          </div>
+          <div class="day-content">
+            <p><strong>Логика:</strong> Обратный путь с культурной остановкой. Мцхета — древняя столица Грузии, объект ЮНЕСКО.</p>
+            <p><strong>Что посмотреть:</strong> Собор Светицховели, монастырь Джвари (смотровая на слияние рек).</p>
+            <p><strong>Ночёвка:</strong> Тбилиси (удобно для раннего выезда в Россию).</p>
+            <div class="day-highlights">
+              <span class="highlight">🏛️ Мцхета (ЮНЕСКО)</span>
+              <span class="highlight alt">🍷 Прощальный ужин</span>
+              <span class="highlight">✓ Культурный финал</span>
+            </div>
+            <span class="toggle-day">▼ Развернуть详情</span>
+          </div>
+        </div>
+
+        <!-- Day 14 -->
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-marker">14</div>
+          <div class="day-header">
+            <div class="day-title">
+              <h3>Тбилиси → Москва</h3>
+              <p class="day-route">~2000 км • Транзит домой</p>
+            </div>
+            <div class="day-meta">
+              <span class="meta-item">🛣️ Обратный путь</span>
+              <span class="meta-item">🏁 Финиш</span>
+            </div>
+          </div>
+          <div class="day-content">
+            <p><strong>Логика:</strong> Возвращение домой. Можно разбить на 2-3 дня с ночёвками в тех же точках (Минводы, Ростов, Воронеж).</p>
+            <p><strong>Альтернатива:</strong> Вылететь самолётом из Тбилиси, оставив машины (если есть возможность).</p>
+            <div class="day-highlights">
+              <span class="highlight">🏁 Финиш поездки</span>
+              <span class="highlight alt">✈️ Опция: авиа</span>
+              <span class="highlight">✓ Домой</span>
+            </div>
+            <span class="toggle-day">▼ Развернуть详情</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="section" id="locations">
+    <div class="container">
+      <div class="section-header">
+        <h2>📍 Ключевые локации</h2>
+        <p>Подробно о каждом месте: зачем ехать, сколько времени провести, плюсы и минусы</p>
+      </div>
+      <div class="locations-grid">
+        
+        <!-- Kobuleti -->
+        <div class="location-card">
+          <div class="location-img">🏖️</div>
+          <div class="location-content">
+            <h3>Кобулети</h3>
+            <div class="location-tags">
+              <span class="tag">База</span>
+              <span class="tag">7 ночей</span>
+              <span class="tag">Пляж</span>
+            </div>
+            <p>Основная база отдыха. Спокойный курорт с песчаным пляжем, развитой инфраструктурой и доступными ценами. Рядом с Батуми, но без шума и толп.</p>
+            <div class="location-pros-cons">
+              <div class="pros">
+                <h4>Плюсы</h4>
+                <ul>
+                  <li>Дешевле Батуми</li>
+                  <li>Спокойнее</li>
+                  <li>Песчаный пляж</li>
+                  <li>Зарядки Tesla</li>
+                </ul>
+              </div>
+              <div class="cons">
+                <h4>Минусы</h4>
+                <ul>
+                  <li>Меньше развлечений</li>
+                  <li>Нет казино</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Batumi -->
+        <div class="location-card">
+          <div class="location-img">🎰</div>
+          <div class="location-content">
+            <h3>Батуми</h3>
+            <div class="location-tags">
+              <span class="tag">Выезд</span>
+              <span class="tag">1-2 дня</span>
+              <span class="tag">Развлечения</span>
+            </div>
+            <p>Столица Аджарии: современная архитектура, казино, набережная, ботанический сад. Идеально для вечерних прогулок и развлечений.</p>
+            <div class="location-pros-cons">
+              <div class="pros">
+                <h4>Плюсы</h4>
+                <ul>
+                  <li>Казино</li>
+                  <li>Рестораны</li>
+                  <li>Набережная</li>
+                  <li>Архитектура</li>
+                </ul>
+              </div>
+              <div class="cons">
+                <h4>Минусы</h4>
+                <ul>
+                  <li>Дорого</li>
+                  <li>Шумно</li>
+                  <li>Галечный пляж</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ureki -->
+        <div class="location-card">
+          <div class="location-img">🧲</div>
+          <div class="location-content">
+            <h3>Уреки</h3>
+            <div class="location-tags">
+              <span class="tag">Выезд</span>
+              <span class="tag">1 день</span>
+              <span class="tag">Здоровье</span>
+            </div>
+            <p>Уникальные чёрные магнитные пески. Лечебный эффект для опорно-двигательной системы. Рядом — соляные пещеры.</p>
+            <div class="location-pros-cons">
+              <div class="pros">
+                <h4>Плюсы</h4>
+                <ul>
+                  <li>Магнитные пески</li>
+                  <li>Соляные пещеры</li>
+                  <li>Мало туристов</li>
+                </ul>
+              </div>
+              <div class="cons">
+                <h4>Минусы</h4>
+                <ul>
+                  <li>Далеко (150 км)</li>
+                  <li>Мало инфраструктуры</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shekvetili -->
+        <div class="location-card">
+          <div class="location-img">⭐</div>
+          <div class="location-content">
+            <h3>Шекветили</h3>
+            <div class="location-tags">
+              <span class="tag">Выезд</span>
+              <span class="tag">1 день</span>
+              <span class="tag">Премиум</span>
+            </div>
+            <p>Лучший пляж региона: чистый песок, прозрачная вода, частный доступ. Ресторанный комплекс, шезлонги, сервис.</p>
+            <div class="location-pros-cons">
+              <div class="pros">
+                <h4>Плюсы</h4>
+                <ul>
+                  <li>Лучший пляж</li>
+                  <li>Чистая вода</li>
+                  <li>Сервис</li>
+                  <li>Рестораны</li>
+                </ul>
+              </div>
+              <div class="cons">
+                <h4>Минусы</h4>
+                <ul>
+                  <li>Дорого</li>
+                  <li>Нужно бронировать</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Turkey -->
+        <div class="location-card">
+          <div class="location-img">🇹🇷</div>
+          <div class="location-content">
+            <h3>Турция (однодневный выезд)</h3>
+            <div class="location-tags">
+              <span class="tag">Выезд</span>
+              <span class="tag">1 день</span>
+              <span class="tag">Культура</span>
+            </div>
+            <p>Переход границы в Сарпи, поездка в Артвин или Трабзон. Шопинг, турецкая кухня, другая культура — без смены основной базы.</p>
+            <div class="location-pros-cons">
+              <div class="pros">
+                <h4>Плюсы</h4>
+                <ul>
+                  <li>Новая страна</li>
+                  <li>Шопинг</li>
+                  <li>Кухня</li>
+                  <li>Близко от Кобулети</li>
+                </ul>
+              </div>
+              <div class="cons">
+                <h4>Минусы</h4>
+                <ul>
+                  <li>Нужны загранпаспорта</li>
+                  <li>Таможня</li>
+                  <li>Рано вставать</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Borjomi -->
+        <div class="location-card">
+          <div class="location-img">🏔️</div>
+          <div class="location-content">
+            <h3>Борджоми</h3>
+            <div class="location-tags">
+              <span class="tag">Выезд</span>
+              <span class="tag">1 день</span>
+              <span class="tag">Горы</span>
+            </div>
+            <p>Горный курорт с минеральными источниками. Зеленый парк, питьевая вода, прохлада после жаркого побережья.</p>
+            <div class="location-pros-cons">
+              <div class="pros">
+                <h4>Плюсы</h4>
+                <ul>
+                  <li>Минеральная вода</li>
+                  <li>Горы</li>
+                  <li>Прохлада</li>
+                  <li>Парк</li>
+                </ul>
+              </div>
+              <div class="cons">
+                <h4>Минусы</h4>
+                <ul>
+                  <li>Нет моря</li>
+                  <li>Туристическое место</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget -->
+  <section class="section" id="budget">
+    <div class="container">
+      <div class="section-header">
+        <h2>💰 Бюджет поездки</h2>
+        <p>Три сценария на компанию из 3-4 человек: бюджетный, комфортный и премиум</p>
+      </div>
+      <div class="budget-cards">
+        
+        <!-- Budget -->
+        <div class="budget-card">
+          <h3>Бюджетный</h3>
+          <div class="price">$1,400</div>
+          <div class="per-person">~$350 на человека</div>
+          <div class="budget-items">
+            <div class="budget-item"><span>Топливо</span><span>$250</span></div>
+            <div class="budget-item"><span>Жильё (14 ночей)</span><span>$500</span></div>
+            <div class="budget-item"><span>Еда</span><span>$400</span></div>
+            <div class="budget-item"><span>Развлечения</span><span>$250</span></div>
+          </div>
+          <div class="budget-total">Итого: $1,400</div>
+        </div>
+
+        <!-- Comfort (Featured) -->
+        <div class="budget-card featured">
+          <h3>⭐ Комфортный</h3>
+          <div class="price">$2,200</div>
+          <div class="per-person">~$550 на человека</div>
+          <div class="budget-items">
+            <div class="budget-item"><span>Топливо</span><span>$300</span></div>
+            <div class="budget-item"><span>Жильё (апартаменты)</span><span>$800</span></div>
+            <div class="budget-item"><span>Еда (рестораны)</span><span>$650</span></div>
+            <div class="budget-item"><span>Развлечения</span><span>$450</span></div>
+          </div>
+          <div class="budget-total">Итого: $2,200</div>
+        </div>
+
+        <!-- Premium -->
+        <div class="budget-card">
+          <h3>Премиум</h3>
+          <div class="price">$3,800</div>
+          <div class="per-person">~$950 на человека</div>
+          <div class="budget-items">
+            <div class="budget-item"><span>Топливо</span><span>$300</span></div>
+            <div class="budget-item"><span>Жильё (люкс)</span><span>$1,500</span></div>
+            <div class="budget-item"><span>Еда (топ-рестораны)</span><span>$1,100</span></div>
+            <div class="budget-item"><span>Развлечения VIP</span><span>$900</span></div>
+          </div>
+          <div class="budget-total">Итого: $3,800</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Transport -->
+  <section class="section" id="transport">
+    <div class="container">
+      <div class="section-header">
+        <h2>🚗 Транспорт</h2>
+        <p>Две машины: Tesla Model X (электро) и Geely Atlas Pro (бензин). Зарядки и заправки учтены в маршруте.</p>
+      </div>
+      <div class="transport-grid">
+        
+        <!-- Tesla -->
+        <div class="transport-card">
+          <h3>⚡ Tesla Model X</h3>
+          <div class="transport-specs">
+            <div class="spec">
+              <div class="spec-value">22</div>
+              <div class="spec-label">кВт·ч/100 км</div>
+            </div>
+            <div class="spec">
+              <div class="spec-value">500+</div>
+              <div class="spec-label">км запас</div>
+            </div>
+          </div>
+          <p><strong>Зарядки на маршруте:</strong></p>
+          <ul style="margin-left:20px;margin-top:10px;font-size:13px;color:var(--text-muted);">
+            <li>Москва (Supercharger)</li>
+            <li>Ростов-на-Дону (Supercharger)</li>
+            <li>Тбилиси (Supercharger) — обязательно перед Кобулети!</li>
+            <li>Кобулети (отель/зарядка)</li>
+          </ul>
+          <p style="margin-top:12px;font-size:13px;color:var(--text-muted);"><strong>Важно:</strong> В Грузии сеть зарядок развита слабо. Всегда заряжайтесь в Тбилиси перед выездом на побережье.</p>
+        </div>
+
+        <!-- Geely -->
+        <div class="transport-card">
+          <h3>⛽ Geely Atlas Pro</h3>
+          <div class="transport-specs">
+            <div class="spec">
+              <div class="spec-value">8.5</div>
+              <div class="spec-label">л/100 км</div>
+            </div>
+            <div class="spec">
+              <div class="spec-value">60</div>
+              <div class="spec-label">л бак</div>
+            </div>
+          </div>
+          <p><strong>Заправки на маршруте:</strong></p>
+          <ul style="margin-left:20px;margin-top:10px;font-size:13px;color:var(--text-muted);">
+            <li>Россия: Лукойл, Газпромнефть (без проблем)</li>
+            <li>Грузия: Rompetrol, Wissol, Lukoil</li>
+            <li>Турция: Shell, BP, Opet</li>
+          </ul>
+          <p style="margin-top:12px;font-size:13px;color:var(--text-muted);"><strong>Преимущество:</strong> Полная независимость от зарядок, можно заправиться везде.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Alternatives -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>🔄 Альтернативные сценарии</h2>
+        <p>Что если что-то пойдёт не по плану? Запасные варианты для ключевых участков.</p>
+      </div>
+      <div class="alternatives">
+        <div class="alt-compare">
+          <div class="alt-option">
+            <h4>⚠️ Очередь на границе Ларс</h4>
+            <p><strong>Проблема:</strong> В высокий сезон бывают очереди 3-5 часов.</p>
+            <p><strong>Решение:</strong> Выезжать из Минвод в 5-6 утра. Мониторить веб-камеры границы заранее.</p>
+            <p><strong>План B:</strong> Объезд через Армению (дольше, сложнее, дороже — не рекомендуется).</p>
+          </div>
+          <div class="alt-option">
+            <h4>🌧️ Плохая погода на побережье</h4>
+            <p><strong>Проблема:</strong> Дожди могут испортить пляжный отдых.</p>
+            <p><strong>Решение:</strong> Перенести ночёвку в Тбилиси или Борджоми (горы, музеи, рестораны).</p>
+            <p><strong>План B:</strong> Забронировать отель в Тбилиси как резерв.</p>
+          </div>
+          <div class="alt-option">
+            <h4>🔧 Поломка машины</h4>
+            <p><strong>Проблема:</strong> Техническая неисправность в пути.</p>
+            <p><strong>Решение:</strong> Полная страховка, контакты локальных сервисов в Грузии.</p>
+            <p><strong>План B:</strong> Аренда машины на месте (Тбилиси, Батуми).</p>
+          </div>
+          <div class="alt-option">
+            <h4>📄 Проблемы с документами</h4>
+            <p><strong>Проблема:</strong> Истёкший паспорт, нет страховки.</p>
+            <p><strong>Решение:</strong> Проверить все документы за 2 недели до поездки.</p>
+            <p><strong>Требования:</strong> Загранпаспорт (2+ года), международные права, страховка.</p>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Practical Info -->
+  <section class="section" id="practical">
+    <div class="container">
+      <div class="section-header">
+        <h2>ℹ️ Практическая информация</h2>
+        <p>Важные детали для подготовки к поездке</p>
+      </div>
+      <div class="practical-grid">
+        
+        <div class="practical-card">
+          <h4>📄 Документы</h4>
+          <ul>
+            <li>Загранпаспорт (минимум 2 года действия)</li>
+            <li>Международные водительские права</li>
+            <li>Медицинская страховка (включая COVID)</li>
+            <li>Документы на машину (СТС, страховка)</li>
+          </ul>
+        </div>
+
+        <div class="practical-card">
+          <h4>💳 Деньги</h4>
+          <ul>
+            <li>Наличные: доллары/евро (менять в Тбилиси)</li>
+            <li>Карты: Visa/Mastercard работают</li>
+            <li>Банкоматы: много в городах</li>
+            <li>Чаевые: 10% в ресторанах</li>
+          </ul>
+        </div>
+
+        <div class="practical-card">
+          <h4>📱 Связь</h4>
+          <ul>
+            <li>SIM-карта: Georgian Mobile (в аэропорту Тбилиси)</li>
+            <li>Роуминг: проверить тарифы заранее</li>
+            <li>WhatsApp/Telegram — основные мессенджеры</li>
+            <li>Wi-Fi: есть в отелях и кафе</li>
+          </ul>
+        </div>
+
+        <div class="practical-card">
+          <h4>🚗 Дорога</h4>
+          <ul>
+            <li>Качество дорог: хорошее в Грузии</li>
+            <li>Правила: правостороннее движение</li>
+            <li>Штрафы: высокие, камеры везде</li>
+            <li>Парковка: бесплатная в большинстве мест</li>
+          </ul>
+        </div>
+
+        <div class="practical-card">
+          <h4>🏥 Безопасность</h4>
+          <ul>
+            <li>Грузия: очень безопасно</li>
+            <li>Полиция: номер 112 (единый)</li>
+            <li>Аптеки: много, лекарства качественные</li>
+            <li>Вода: питьевая в горах и городах</li>
+          </ul>
+        </div>
+
+        <div class="practical-card">
+          <h4>🍽️ Еда</h4>
+          <ul>
+            <li>Грузинская кухня: хачапури, хинкали</li>
+            <li>Рестораны: средний счёт $10-20/чел</li>
+            <li>Супермаркеты: Carrefour, Goodwill</li>
+            <li>Вино: местное, дешёвое и качественное</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <h2>Готовы к обсуждению?</h2>
+        <p>Этот план можно адаптировать под ваши предпочтения: изменить даты, добавить точки, поменять бюджет. Обсудим в Telegram-чате!</p>
+        <div class="cta-buttons">
+          <a href="#route" class="btn btn-white">📅 Посмотреть маршрут</a>
+          <a href="#budget" class="btn btn-outline">💰 Проверить бюджет</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>Шаблон подготовлен как единый HTML-блок для вставки в Tilda. При желании его можно адаптировать в полноценный отдельный сайт или Telegram Mini App.</p>
+      <p>🚗 Грузия + Турция: Автопутешествие на море — Июнь 2026</p>
+      <p style="margin-top:8px;">Создано для обсуждения в Telegram-чате компании</p>
     </div>
   </footer>
 
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <div class="container mobile-nav-inner">
+      <a href="#route" class="active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Маршрут</span>
+      </a>
+      <a href="#locations">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Локации</span>
+      </a>
+      <a href="#budget">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Бюджет</span>
+      </a>
+      <a href="#practical">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span>Инфо</span>
+      </a>
+    </div>
+  </nav>
+
   <script>
+    // Theme toggle
     (function(){
       const btn = document.querySelector('[data-theme-toggle]');
       const root = document.documentElement;
-      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.setAttribute('data-theme', theme);
-      const render = () => {
-        btn.setAttribute('aria-label', theme === 'dark' ? 'Переключить на светлую тему' : 'Переключить на тёмную тему');
+      let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      
+      function setTheme(t) {
+        theme = t;
+        root.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
         btn.innerHTML = theme === 'dark'
           ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
           : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      };
-      render();
-      btn.addEventListener('click', function(){
-        theme = theme === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', theme);
-        render();
-      });
+      }
+      
+      setTheme(theme);
+      btn.addEventListener('click', () => setTheme(theme === 'dark' ? 'light' : 'dark'));
     })();
+
+    // Toggle day cards
+    function toggleDay(card) {
+      const wasActive = card.classList.contains('active');
+      document.querySelectorAll('.day-card').forEach(c => c.classList.remove('active'));
+      if (!wasActive) card.classList.add('active');
+    }
+
+    // Mobile nav active state
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.mobile-nav a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
